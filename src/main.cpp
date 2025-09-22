@@ -47,7 +47,7 @@ int main() {
     signal(SIGTERM, signalHandler);
     
     try {
-        Transport transport(1024);
+        Transport transport;
         
         // Add type handler for STATUS messages
         transport.addTypeHandler(buzz::wire::MsgType::STATUS, handleStatusMessage);
